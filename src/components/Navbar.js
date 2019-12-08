@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 class Navbar extends Component {
+  static contextType = ThemeContext;
   render() {
+    const { isLightTheme, navLight, navDark } = this.context;
+    const theme = isLightTheme ? navLight : navDark;
+    console.log(theme);
     return (
       <div>
-        <nav
-          className="navbar navbar-expand-lg navbar-light"
-          style={{ backgroundColor: "#e3f2fd" }}
-        >
+        <nav className={"navbar navbar-expand-lg " + theme}>
           <a className="navbar-brand" href="#">
             BookList Manager
           </a>
