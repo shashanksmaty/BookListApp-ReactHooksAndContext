@@ -8,9 +8,16 @@ class ThemeContextProvider extends Component {
     navLight: "navbar-dark bg-primary",
     navDark: "navbar-dark bg-dark"
   };
+  toggleTheme = () => {
+    this.setState({
+      isLightTheme: !this.state.isLightTheme
+    });
+  };
   render() {
     return (
-      <ThemeContext.Provider value={{ ...this.state }}>
+      <ThemeContext.Provider
+        value={{ ...this.state, toggleTheme: this.toggleTheme }}
+      >
         {this.props.children}
       </ThemeContext.Provider>
     );

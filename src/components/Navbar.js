@@ -4,7 +4,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 class Navbar extends Component {
   static contextType = ThemeContext;
   render() {
-    const { isLightTheme, navLight, navDark } = this.context;
+    const { isLightTheme, navLight, navDark, toggleTheme } = this.context;
     const theme = isLightTheme ? navLight : navDark;
     console.log(theme);
     return (
@@ -38,6 +38,11 @@ class Navbar extends Component {
                 </a>
               </li>
             </ul>
+            <div className="my-2">
+              <button className="btn btn-outline-light" onClick={toggleTheme}>
+                Change Theme
+              </button>
+            </div>
           </div>
         </nav>
       </div>
