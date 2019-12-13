@@ -1,26 +1,38 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import AddBookForm from "./AddBookForm";
+import uuid from "uuid/v1";
 
-class Booklist extends Component {
-  render() {
-    return (
-      <div className="container">
-        <div className="row mt-4">
-          <div className="col-md-12">
-            <h2 className="text-center">Booklist Manager</h2>
-            <div className="row justify-content-center mt-4">
-              <div className="col-md-6">
-                <ul className="list-group">
-                  <li className="list-group-item">Winners Take All</li>
-                  <li className="list-group-item">The Hate U Give</li>
-                  <li className="list-group-item">The God of Small Things</li>
-                </ul>
-              </div>
+const Booklist = () => {
+  const [books, setBooks] = useState([
+    { title: "Winners Take All", id: 1 },
+    { title: "The Hate U Give", id: 2 },
+    { title: "The God of Small Things", id: 3 },
+    { title: "Veronica Decides to Die", id: 4 }
+  ]);
+  const addBook = title => {
+    setBooks([...books, { title: title, id: uuid() }]);
+  };
+  return (
+    <div className="container">
+      <div className="row mt-4">
+        <div className="col-md-12">
+          <h2 className="text-center">Booklist Manager</h2>
+          <AddBookForm addBook={addBook} />
+          <div className="row justify-content-center mt-4">
+            <div className="col-md-6">
+              <ul className="list-group">
+                {books.map(books => (
+                  <li className="list-group-item" key={books.id}>
+                    {books.title}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Booklist;
