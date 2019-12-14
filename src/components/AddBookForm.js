@@ -5,6 +5,7 @@ const AddBookForm = ({ addBook }) => {
   const handleSubmit = e => {
     e.preventDefault();
     addBook(title);
+    setTitle("");
   };
   return (
     <div className="row mt-4 justify-content-center">

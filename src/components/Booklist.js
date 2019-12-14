@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import AddBookForm from "./AddBookForm";
 import uuid from "uuid/v1";
+import { BookContext } from "../contexts/BookContext";
 
 const Booklist = () => {
-  const [books, setBooks] = useState([
-    { title: "Winners Take All", id: 1 },
-    { title: "The Hate U Give", id: 2 },
-    { title: "The God of Small Things", id: 3 },
-    { title: "Veronica Decides to Die", id: 4 }
-  ]);
-  const addBook = title => {
-    setBooks([...books, { title: title, id: uuid() }]);
-  };
+  const { books, addBook } = useContext(BookContext);
   return (
     <div className="container">
       <div className="row mt-4">
