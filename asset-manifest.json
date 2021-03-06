@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/BookListApp-ReactHooksAndContext/static/js/main.46f63727.chunk.js",
+    "main.js.map": "/BookListApp-ReactHooksAndContext/static/js/main.46f63727.chunk.js.map",
+    "runtime-main.js": "/BookListApp-ReactHooksAndContext/static/js/runtime-main.4bc4a6b8.js",
+    "runtime-main.js.map": "/BookListApp-ReactHooksAndContext/static/js/runtime-main.4bc4a6b8.js.map",
+    "static/js/2.ff26f9a8.chunk.js": "/BookListApp-ReactHooksAndContext/static/js/2.ff26f9a8.chunk.js",
+    "static/js/2.ff26f9a8.chunk.js.map": "/BookListApp-ReactHooksAndContext/static/js/2.ff26f9a8.chunk.js.map",
+    "index.html": "/BookListApp-ReactHooksAndContext/index.html",
+    "precache-manifest.82f44743b14d339baf0a959f075b3ca9.js": "/BookListApp-ReactHooksAndContext/precache-manifest.82f44743b14d339baf0a959f075b3ca9.js",
+    "service-worker.js": "/BookListApp-ReactHooksAndContext/service-worker.js",
+    "static/js/2.ff26f9a8.chunk.js.LICENSE": "/BookListApp-ReactHooksAndContext/static/js/2.ff26f9a8.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bc4a6b8.js",
+    "static/js/2.ff26f9a8.chunk.js",
+    "static/js/main.46f63727.chunk.js"
+  ]
+}
